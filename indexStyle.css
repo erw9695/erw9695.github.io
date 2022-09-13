@@ -1,0 +1,40 @@
+body {
+    background-color: #B0D7FF;
+}
+
+nav {
+    align-items: center;
+    background-color: #ADACB5;
+    height: 50px;
+}
+
+span {
+    color: beige;
+    font-size: 40px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+div {
+    align-items: center;
+    text-align: center;
+    background-color: #84A98C;
+    width: 1200px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+section {
+    font-size: 50px;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #B7B3A1;
+}
+
