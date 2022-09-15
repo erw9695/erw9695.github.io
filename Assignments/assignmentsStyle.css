@@ -1,0 +1,43 @@
+h2 {
+    text-align: center;
+    font-size: 80px;
+}
+
+div {
+    text-align: center;
+    background-color: #FFFFFF;
+    width: 1150px;
+    height: 500px;
+    border-radius: 30px;
+    margin: 30px;
+}
+
+section {
+    font-size: 50px;
+    color: white;
+}
+
+nav {
+    text-align: center;
+    background-color: #B9C0DA;
+    height: 70px;
+}
+
+span {
+    color: beige;
+    font-size: 40px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+body {
+    background-image: url("https://www.freepik.com/free-photos-vectors/background");
+    background-color: #ECF0F1;
+}
+
+a {
+    text-decoration: none;
+}
