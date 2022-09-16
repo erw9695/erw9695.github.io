@@ -12,6 +12,11 @@ div {
     margin: 30px;
 }
 
+img {
+    width: 50%;
+    height: 80%;
+}
+
 section {
     font-size: 50px;
     color: white;
