@@ -1,10 +1,10 @@
-/* nav {
+.blueBack {
     text-align: center;
     background-color: #B9C0DA;
     height: 70px;
 }
 
-span {
+.headStyle {
     color: beige;
     font-size: 40px;
     align-items: center;
@@ -12,26 +12,4 @@ span {
     padding-bottom: 20px;
     padding-right: 20px;
     padding-left: 20px;
-} */
-
-body {
-    background-color: #ECF0F1;
-}
-
-a {
-    text-decoration: none;
-}
-
-h1 {
-    text-align: center;
-}
-
-p {
-    padding-left: 80px;
-    padding-right: 80px;
-    text-indent: 60px;
-}
-
-div {
-    text-align: center;
 }
