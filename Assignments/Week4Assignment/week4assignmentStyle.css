@@ -1,3 +1,12 @@
+.quoteStyle {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-family: "Courier New";
+    font-weight: bold;
+    margin: 50px;
+}
+
 .textStyle {
     margin-top: 50px;
     margin-left: 100px;
@@ -6,19 +15,29 @@
     text-indent: 60px;
 }
 
-.quoteStyle {
-    text-align: center;
-    font-size: 25px;
-    font-family: "Courier New";
-    font-weight: bold;
-    margin: 50px;
-}
-
 .imgStyle {
     height: auto;
     width: auto;
-    max-height: 90%;
-    max-width: 90%;
+    max-height: 40%;
+    max-width: 40%;
+}
+
+.imgHover {
+    opacity: 0;
+}
+
+/* Resource: https://stackoverflow.com/questions/42516712/display-an-image-while-hover-on-a-text */
+
+.imgHover:hover {
+    opacity: 1;
+}
+
+.quoteHover {
+    opacity: .3;
+}
+
+.quoteHover:hover {
+    opacity: 1;
 }
 
 .centerImg {
