@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style4.css" rel = "stylesheet"  type="text/css"/>
+</head>
+
+<body>
+<main>
+    <div class="container1">
+        <img id="pic" src="img/image.jpg" height="1000" width="1000">
+    
+    </div>
+
+    <div class="container2">
+        <p id="text">
+            </p>
+    </div>
+
+</main>
+
+
+</body>
+
+<script>
+    var arr = [" 'photographic seeing,” which was both a " +
+    " new way for people to see and a new activity for them to perform' \n" +
+    " Instead of looking, photographs",
+        "\"So successful has been the camera’s role in beautifying the world that\n" +
+        "photographs, rather than the world, have become the standard\n" +
+        "of the beautiful\"\n" +
+        "Instead of paintings of seeing, photographs are the way to see now the way. Because\n" +
+        "they are more beautiful than the physical world",
+        "\"[Photographs] changed seeing itself, by fostering the idea\n" +
+        "of seeing for seeing’s sake. ... Observation ... [acquired] the stature of moral duty\"\n" +
+        "The vanity of photographs is that there is no deeper meaning for photographing. They just\n" +
+        "want to photograph for the sake of photographing\n",
+        "\"But photographic seeing has to\n" +
+        "be constantly renewed with new shocks, whether of subject matter\n" +
+        "or technique, so as to produce the impression of violating ordinary\n" +
+        "vision\"\n" +
+        "The beauty of photographs is not from the essence of photographs themselves, but because\n" +
+        "they are able to capture beauty and distort it, make it something never before seen.\n",
+        "\" 'I want it to\n" +
+        "be an altogether new object, complete and self-contained, whose\n" +
+        "basic condition is order.' \"\n" +
+        "Creating an object out of beauty",
+        "\" As\n" +
+        "Wittgenstein argued for words, that the meaning is the use—so\n" +
+        "for each photograph \"\n" +
+        "The beauty of context is lost, only sense used is sight."
+    ]
+    var arrimg = ['img/image.jpg', 'img/image2Lazlo.jpg', 'img/image3.jpg', 'img/image4JacquesHenri.jpg',
+        "img/image5JacobRiis.jpg", "img/image6JosephCornell.jpg", "img/Image7MyanmarCoup.jpeg",
+        "img/image8pollution.jpg"];
+
+    var params = new URLSearchParams(location.search);
+    var img = params.get('num');
+
+    document.getElementById("text").innerText = arr[img];
+    document.getElementById("pic").src = arrimg[img];
+</script>
+</html>
