@@ -1,0 +1,63 @@
+body {
+    background: url("https://media.istockphoto.com/vectors/autumn-forest-vector-id1039606576?k=20&m=1039606576&s=612x612&w=0&h=v3vgmYPLldtzYmVV9Eln80hhfTfoG3XSa1S_b8zn3sc=");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.rake {
+    position: fixed;
+    bottom: -10;
+    width: 100%;
+}
+
+.rake:hover {
+    animation: 10s linear 3s infinite alternate-reverse both rakeLeaves;
+}
+
+@keyframes rakeLeaves {
+    from {
+        transform: translateX(110vh);
+    }
+    to {
+        transform: translateX(150);
+    }
+}
+
+.leafContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.leaf {
+    width: 10px;
+    height: 10px;
+}
+
+.leafOne {
+    animation: 6s linear 1s infinite reverse both leafOneKeyFrame;
+}
+
+.leafTwo {
+    animation: 4s linear 1s infinite reverse both leafTwoKeyFrame;
+}
+
+@keyframes leafOneKeyFrame {
+    from {
+        transform: translateY(110vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes leafTwoKeyFrame {
+    from {
+        transform: translateY(130vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
