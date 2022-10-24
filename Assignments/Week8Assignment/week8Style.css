@@ -1,5 +1,5 @@
 body {
-    background: url("https://media.istockphoto.com/vectors/autumn-forest-vector-id1039606576?k=20&m=1039606576&s=612x612&w=0&h=v3vgmYPLldtzYmVV9Eln80hhfTfoG3XSa1S_b8zn3sc=");
+    background: url("https://www.goldsteinchryslerdodgejeep.com/blogs/1828/wp-content/uploads/2017/10/newleaves.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -38,10 +38,6 @@ body {
     animation: 6s linear 1s infinite reverse both leafOneKeyFrame;
 }
 
-.leafTwo {
-    animation: 4s linear 1s infinite reverse both leafTwoKeyFrame;
-}
-
 @keyframes leafOneKeyFrame {
     from {
         transform: translateY(110vh);
@@ -52,9 +48,83 @@ body {
     }
 }
 
+.leafTwo {
+    animation: 4s linear 1s infinite reverse both leafTwoKeyFrame;
+}
+
 @keyframes leafTwoKeyFrame {
     from {
         transform: translateY(130vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.leafThree {
+    animation: 5s linear 1s infinite reverse both leafThreeKeyFrame;
+}
+
+@keyframes leafThreeKeyFrame {
+    from {
+        transform: translateY(150vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.leafFour {
+    animation: 8s linear 1s infinite reverse both leafFourKeyFrame;
+}
+
+@keyframes leafFourKeyFrame {
+    from {
+        transform: translateY(180vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.leafFive {
+    animation: 3s linear 1s infinite reverse both leafFiveKeyFrame;
+}
+
+@keyframes leafFiveKeyFrame {
+    from {
+        transform: translateY(110vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.leafSix {
+    animation: 7s linear 1s infinite reverse both leafSixKeyFrame;
+}
+
+@keyframes leafSixKeyFrame {
+    from {
+        transform: translateY(120vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.leafSeven {
+    animation: 9s linear 1s infinite reverse both leafSevenKeyFrame;
+}
+
+@keyframes leafSevenKeyFrame {
+    from {
+        transform: translateY(105vh);
     }
 
     to {
