@@ -1,8 +1,14 @@
-body {
-    background-color: #ECF0F1;
+.backgroundColor {
+    background-color: #256cb3;
 }
 
 a {
     text-decoration: none;
 }
 
+.imageSize {
+    width: auto;
+    height: auto;
+    max-width: 750px;
+    max-height: 450px;
+}
