@@ -1,0 +1,94 @@
+body {
+    background-color: grey;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+#playButton {
+    width: 200px;
+    height: 200px;
+    border-radius: 290px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+#earEye {
+    display: None;
+    width: auto;
+    height: auto;
+    max-height: 800px;
+    max-width: 95%;
+    opacity: 0;
+}
+
+#earEyeText {
+    margin: 60px;
+    display: None;
+    color: aliceblue;
+}
+
+@keyframes vanish {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#verticalFrame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#visualsBox {
+    display: none;
+    height: 400px;
+    width: 800px;
+}
+
+#visualsBoxImg {
+    max-width: 800px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+}
+
+#visualsText {
+    display: None;
+    color: aliceblue;
+    margin: 60px;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 450px;
+    width: 95%;
+}
+
+.frame {
+    width: 95%;
+    height: 800px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
