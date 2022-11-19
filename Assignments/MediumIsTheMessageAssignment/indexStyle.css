@@ -1,5 +1,5 @@
 body {
-    background-color: grey;
+    background-color: black;
 }
 
 .center {
@@ -24,10 +24,18 @@ body {
     opacity: 0;
 }
 
+#electric {
+    color: aliceblue;
+}
+
 #earEyeText {
     margin: 60px;
     display: None;
     color: aliceblue;
+}
+
+#secondFrame {
+    display: none;
 }
 
 @keyframes vanish {
@@ -91,4 +99,25 @@ body {
     background-color: black;
     display: flex;
     flex-direction: row;
+}
+
+#tech1 {
+    opacity: 0;
+    width: 400px;
+    height: 400px;
+    margin: 30px;
+}
+
+#tech2 {
+    opacity: 0;
+    width: 400px;
+    height: 400px;
+    margin: 30px;
+}
+
+#tech3 {
+    opacity: 0;
+    width: 400px;
+    height: 400px;
+    margin: 30px;
 }
