@@ -1,0 +1,61 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #DE541E;
+    height: auto;
+    max-height: 100px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.gap {
+    height: 50px;
+}
+
+.headerButton {
+    font-size: 30px;
+    color: #D6D6B1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-decoration: none;
+}
+
+#headerSize {
+    color: #D6D6B1;
+    font-size: 50px;
+}
+
+.homeCatalog {
+    height: 200px;
+    width: 950px;
+    background-color: beige;
+}
+
+.homeAbout {
+    height: 200px;
+    width: 600px;
+    background-color: lightblue;
+}
+
+.homeCart {
+    height: 200px;
+    width: 350px;
+    background-color: pink;
+}
+
+.homeFont {
+    margin: 10px;
+    font-size: 30px;
+    color: #3f3f37;
+}
+
+a {
+    text-decoration: none;
+}
