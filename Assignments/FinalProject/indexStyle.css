@@ -44,6 +44,34 @@
     background-color: lightblue;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.item {
+    width: 150px;
+    height: 200px;
+    background-color: grey;
+    margin: 10px;
+    border-radius: 5px;
+    opacity: .7;
+}
+
+.sidebar {
+    margin: 10px;
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    background-color: #4c5760;
+    opacity: .65;
+}
+
+.sideBySide {
+    display: flex;
+    flex-direction: row;
+}
+
 .homeCart {
     height: 200px;
     width: 350px;
