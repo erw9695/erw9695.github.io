@@ -30,6 +30,9 @@ document.getElementById("totalPrice").innerHTML = "Total Price: $" + (totalPrice
 listItem.style.display = "none";
 
 function clearCart() {
+    document.getElementById("subTotal").style.display = "none";
+    document.getElementById("tax").style.display = "none";
+    document.getElementById("totalPrice").style.display = "none";
     if (shoppingCart.length > 0) {
         localStorage.clear();
         var listChildren = document.getElementById("shoppingCartListItems").children;
