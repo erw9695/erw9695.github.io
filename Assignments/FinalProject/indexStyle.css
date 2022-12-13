@@ -276,10 +276,6 @@ li {
     height: 140px;
 }
 
-.catalogItemHover {
-
-}
-
 .catalogItemHover:hover {
     animation: expandItem 1s linear 0s infinite alternate;
 }
