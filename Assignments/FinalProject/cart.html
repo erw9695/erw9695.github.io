@@ -8,66 +8,105 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="header">
+    <div class="header center sideBySide">
         <a href="./index.html">
-            <h2 id="headerSize">The Online Store</h2>
+            <img id="webmartSize" src="./productImages/webmart.png">
         </a>
-    </div>
-    <div class="header">
-        <a class="headerButton" href="./catalog.html">Catalog</a>
-        <a class="headerButton" href="">Shopping Cart</a>
-        <a class="headerButton" href="">About</a>
-    </div>
-    <div class="center">
-        <div class="sideBySide">
-            <div class="shoppingCartList">
-                <h2 id="shoppingCartTitle">Shopping Cart</h2>
-                <div class="center">
-                    <ul id="shoppingCartListItems">
-                        <li>
-                            <div class="center">
-                                <div class="sideBySide">
-                                    <p class="alignLeft">1 Can of Erasers</p>           
-                                    <p class="alignRight">1.00</p>     
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="center">
-                                <div class="sideBySide">
-                                    <p class="alignLeft">1 Can of Erasers</p>           
-                                    <p class="alignRight">1.00</p>     
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="center">
-                                <div class="sideBySide">
-                                    <p class="alignLeft">1 Can of Erasers</p>           
-                                    <p class="alignRight">1.00</p>     
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="center">
-                                <div class="sideBySide">
-                                    <p class="alignLeft">1 Can of Erasers</p>           
-                                    <p class="alignRight">1.00</p>     
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="center">
-                                <div class="sideBySide">
-                                    <p class="alignLeft">1 Can of Erasers</p>           
-                                    <p class="alignRight">1.00</p>     
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="middle">
+            <a class="headerButton" href="./catalog.html">Catalog</a>
+            <a class="headerButton" href="./cart.html">Shopping Cart</a>
+            <a class="headerButton" href="./about.html">About</a>
         </div>
     </div>
+    <div class="center">
+        <div id="cartPage" class="stack">
+            <div id="shoppingCartTitle" class="center">
+                <h2 id="cartTitleID">Shopping Cart</h2>
+            </div>
+            <ul id="shoppingCartListItems">
+                <li id="liItem">
+                    <div class="sideBySide">
+                        <p class="itemName"></p>
+                        <p class="itemPrice"></p> 
+                    </div>
+                </li> 
+            </ul>
+            <h2 id="subTotal"></h2>
+            <h2 id="tax"></h2>
+            <h2 id="totalPrice"></h2>
+            <div class="sideBySide">
+                <button id="purchaseButton" onclick="purchaseClick()">Purchase</button>
+                <button id="clearCartButton" onclick="clearCart()">Clear</button>
+            </div>
+        </div>
+        <div id="confirmPurchase">
+            <div class="stack center">
+                <h2>Purchase confirmed.  Thank you for shopping with us.</h2>
+                <div class="center">
+                    <img id="webmartSize" src="./productImages/webmart2.png">
+                </div>
+            </div>         
+        </div>
+    </div>
+    <div id="bottomBanner" class="header center">
+        <img id="webmartSize" src="./productImages/webmart.png">
+    </div>
+    <script>
+        var productName = ['Air','Can','Canned Music','Can of Erasers','Can of Glue','Can of Paper','1/2 Table','The Paperclip','Batteries','Doorknob','Lightbulb','A Tree','Bike Wheel','Spork','Seashell','Coffee Mug','Garbage Can','Blue Crayon','3:07:03 Clock','Mailbox','Empty Box']
+        var productPrice = ['$79.99','$19.99','$5.99','$29.99','$12.99','$34.99','$199.99','$899.99','$49.99','$24.99','$6.99','$16.99','$32.99','$0.99','$3.99','$5.99','$24.99','$4.99','$23.99','$33.99','$12.99']
+        
+        var cart = localStorage.getItem("shoppingCart");
+        var shoppingCart = JSON.parse(cart);
+
+        var listItem = document.getElementById("liItem");
+
+        var totalPrice = 0;
+
+        for (var i = 0; i < shoppingCart.length; i++) {
+            var itemClone = listItem.cloneNode(true)
+
+            totalPrice += parseFloat(productPrice[shoppingCart[i]].substring(1));
+
+            itemClone.id = itemClone.id+i;
+            itemClone.querySelector(".itemName").innerHTML = productName[shoppingCart[i]];
+            itemClone.querySelector(".itemPrice").innerHTML = productPrice[shoppingCart[i]];
+            itemClone.style.display = "block";
+
+            document.getElementById("shoppingCartListItems").appendChild(itemClone);
+
+            itemClone.style.animation = "fadeIn 3s";
+        }
+
+        document.getElementById("subTotal").innerHTML = "Subtotal Price: $" + totalPrice.toFixed(2);
+        document.getElementById("tax").innerHTML = "Tax: $" + (totalPrice*.08).toFixed(2);
+        document.getElementById("totalPrice").innerHTML = "Total Price: $" + (totalPrice*1.08).toFixed(2);
+
+        listItem.style.display = "none";
+
+        function clearCart() {
+            if (shoppingCart.length > 0) {
+                localStorage.clear();
+                var listChildren = document.getElementById("shoppingCartListItems").children;
+                for (var i = 0; i < listChildren.length; i++) {
+                    listChildren[i].style.display = "none";
+                }
+            }      
+        }
+
+        function purchaseClick() {
+            if (shoppingCart.length > 0) {
+                localStorage.clear();
+                document.getElementById("cartPage").style.animation = "fadeOut 2s";
+                document.getElementById("cartPage").addEventListener("animationend",continuePurchaseClick);       
+            }
+        }
+
+        function continuePurchaseClick() {
+            document.getElementById("bottomBanner").style.display = "none";
+            document.getElementById("cartPage").style.display = "none";
+            document.getElementById("confirmPurchase").style.animation = "fadeIn 2s";
+            document.getElementById("confirmPurchase").style.display = "block";
+        }
+    </script>
 </body>
-</html>
+</html> 
