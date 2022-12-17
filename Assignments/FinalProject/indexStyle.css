@@ -16,8 +16,6 @@
 .center {
     display: flex;
     justify-content: center;
-    /* Removed this.
-    align-self: flex-end; */
 }
 
 .gap {
@@ -214,10 +212,6 @@ body {
     margin: 5px;
 }
 
-.shoppingCartList {
-
-}
-
 li {
     font-size: 35px;
 }
@@ -249,9 +243,6 @@ li {
     font-size: 40px;
 }
 
-.spaceBetween {
-}
-
 .itemCount {
     margin: 10px;
 }
@@ -269,6 +260,7 @@ li {
 .aboutParagraph {
     text-indent: 60px;
     margin: 10px;
+    font-size: 40px;
 }
 
 .imgSize {
